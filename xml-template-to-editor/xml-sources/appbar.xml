@@ -1,0 +1,57 @@
+<ref_navigation_icon_appbar type="options">
+     <option>
+          <AppBarPage.NavigationIcon
+               icon="back"
+          >
+          </AppBarPage.NavigationIcon>
+     </option>
+
+     <option>
+          <AppBarPage.NavigationIcon
+               icon="cancel"
+          >
+          </AppBarPage.NavigationIcon>
+     </option>
+
+     <option>
+          <AppBarPage.NavigationIcon
+               icon="hidden"
+          >
+          </AppBarPage.NavigationIcon>
+     </option>
+</ref_navigation_icon_appbar>
+
+<ref_icon_action_appbar type="object">
+     <prop name="icon">$ref_all_icons</prop>
+     <prop name="caption">[string]</prop>
+</ref_icon_action_appbar>
+
+<ref_all_icons type="options">
+     <option>mds_ic_apps</option>
+     <option>mds_ic_alarm_on</option>
+</ref_all_icons>
+
+<ref_actions_appbar_1_icon_action type="array">
+     <item ref="$ref_actions_appbar"/>
+</ref_actions_appbar_1_icon_action>
+
+<AppBar
+     type="template"
+     title="[string]"
+     subtitle="[string]"
+     navigation="{}"
+     navigationIcon="$ref_navigation_icon_appbar"
+     actions="$ref_actions_appbar_1_icon_action"
+>
+</AppBar>
+
+
+<AppBar
+     type="template"
+     title="[string]"
+     subtitle="[string]"
+     navigation="{}"
+     navigationIcon="$ref_navigation_icon_appbar"
+     actions="$ref_actions_appbar_1_icon_action"
+>
+</AppBar>
