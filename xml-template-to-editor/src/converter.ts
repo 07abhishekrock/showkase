@@ -1,4 +1,4 @@
-import { ComponentTemplate, NumberTemplate, ObjectTemplate, ReferentialTemplate, StringTemplate } from "./types";
+import { ComponentTemplate, NumberTemplate, ObjectPropertyTemplate, ObjectTemplate, ReferentialTemplate, StringTemplate } from "./types";
 
 const STRING_INJECT = "[string]";
 const NUMBER_INJECT = "[number]";
@@ -46,6 +46,56 @@ const createRefTemplate = (refName: string): ReferentialTemplate => {
      }
 
 
+}
+
+const createDummyTemplate = ()=>{
+
+}
+
+const readAllProps = (childNodes: Element[]): ObjectPropertyTemplate[]=>{
+     return childNodes.map<ObjectPropertyTemplate>((childNode)=>{
+
+          if(childNode.hasChildNodes){
+
+               let firstChildNode = childNode.children[0]
+
+               if(firstChildNode.textContent === STRING_INJECT){
+                    return {
+                         name: childNode.getAttribute('name'),
+                         type: 'object-property',
+                         value: createStringTemplate('')
+                    }
+               }
+
+               else if(firstChildNode.textContent === NUMBER_INJECT) {
+                    return {
+                         name: childNode.getAttribute('name'),
+                         type: 'object-property',
+                         value: createNumberTemplate(0)
+                    }
+               }
+
+               return {
+                    name: childNode.getAttribute('name'),
+                    type: 'object-property',
+                    value: createStringTemplate('')
+               }
+
+          }
+          else if(childNode.getAttribute('ref')){
+               return {
+                    name: childNode.getAttribute('name'),
+                    type: 'object-property',
+                    value: createRefTemplate(childNode.getAttribute('ref'))
+               }
+          }
+          return {
+               name: childNode.getAttribute('name'),
+               type: 'object-property',
+               value: 
+          }
+
+     })
 }
 
 const createObjectTemplate = (ref: string): ObjectTemplate=>{

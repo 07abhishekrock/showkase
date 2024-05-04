@@ -57,3 +57,9 @@ export type ComponentTemplate = {
      type: 'component';
      props: Record<string, Template>;
 }
+
+export type ObjectPropertyTemplate = {
+     type: 'object-property';
+     name: string;
+     value: Template;
+}
