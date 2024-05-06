@@ -1,3 +1,4 @@
+<xml>
 <ref_navigation_icon_appbar type="options">
      <option>
           <AppBarPage.NavigationIcon
@@ -22,7 +23,7 @@
 </ref_navigation_icon_appbar>
 
 <ref_icon_action_appbar type="object">
-     <prop name="icon">$ref_all_icons</prop>
+     <prop name="icon">ref_all_icons</prop>
      <prop name="caption">[string]</prop>
 </ref_icon_action_appbar>
 
@@ -32,26 +33,39 @@
 </ref_all_icons>
 
 <ref_actions_appbar_1_icon_action type="array">
-     <item ref="$ref_actions_appbar"/>
+     <item ref="ref_icon_action_appbar"/>
 </ref_actions_appbar_1_icon_action>
 
-<AppBar
-     type="template"
-     title="[string]"
-     subtitle="[string]"
-     navigation="{}"
-     navigationIcon="$ref_navigation_icon_appbar"
-     actions="$ref_actions_appbar_1_icon_action"
->
-</AppBar>
-
+<ref_dummy_navigation_prop type="dummy">{}</ref_dummy_navigation_prop>
 
 <AppBar
      type="template"
      title="[string]"
      subtitle="[string]"
-     navigation="{}"
+     navigation="$ref_dummy_navigation_prop"
      navigationIcon="$ref_navigation_icon_appbar"
      actions="$ref_actions_appbar_1_icon_action"
+     iconName="$ref_all_icons"
+     showkase:name="AppBar"
+     showkase:id="With 1 Icon Action"
 >
+     <AppBarMyAction
+          showkase:name="AppBarMyAction"
+          hello="[string]"
+          iconName="$ref_all_icons"
+          type="template-child"
+     >
+
+          <AppBarMyAction
+               showkase:name="AppBarMyAction"
+               hello="[string]"
+               iconName="$ref_all_icons"
+               type="template-child"
+          >
+
+          </AppBarMyAction>
+
+
+     </AppBarMyAction>
 </AppBar>
+</xml>

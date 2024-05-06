@@ -1,0 +1,135 @@
+[
+     {
+          "type": "component",
+          "name": "AppBar",
+          "id": "With 1 Icon Action",
+          "children": [
+               {
+                    "type": "component-child",
+                    "name": "AppBarMyAction",
+                    "children": [
+                         {
+                              "type": "component-child",
+                              "name": "AppBarMyAction",
+                              "children": [],
+                              "props": {
+                                   "hello": {
+                                        "type": "string",
+                                        "defaultValue": ""
+                                   },
+                                   "iconName": {
+                                        "type": "options",
+                                        "options": [
+                                             {
+                                                  "type": "hard-coded",
+                                                  "value": "mds_ic_apps"
+                                             },
+                                             {
+                                                  "type": "hard-coded",
+                                                  "value": "mds_ic_alarm_on"
+                                             }
+                                        ],
+                                        "ref": "ref_all_icons"
+                                   }
+                              }
+                         }
+                    ],
+                    "props": {
+                         "hello": {
+                              "type": "string",
+                              "defaultValue": ""
+                         },
+                         "iconName": {
+                              "type": "options",
+                              "options": [
+                                   {
+                                        "type": "hard-coded",
+                                        "value": "mds_ic_apps"
+                                   },
+                                   {
+                                        "type": "hard-coded",
+                                        "value": "mds_ic_alarm_on"
+                                   }
+                              ],
+                              "ref": "ref_all_icons"
+                         }
+                    }
+               }
+          ],
+          "props": {
+               "title": {
+                    "type": "string",
+                    "defaultValue": ""
+               },
+               "subtitle": {
+                    "type": "string",
+                    "defaultValue": ""
+               },
+               "navigation": {
+                    "type": "dummy",
+                    "ref": "ref_dummy_navigation_prop",
+                    "valueToPut": "{}"
+               },
+               "navigationIcon": {
+                    "type": "options",
+                    "options": [
+                         {
+                              "type": "hard-coded",
+                              "value": "\r\n          <AppBarPage.NavigationIcon \n               icon=\"back\"\r\n          >\r\n          </AppBarPage.NavigationIcon>\r\n     "
+                         },
+                         {
+                              "type": "hard-coded",
+                              "value": "\r\n          <AppBarPage.NavigationIcon \n               icon=\"cancel\"\r\n          >\r\n          </AppBarPage.NavigationIcon>\r\n     "
+                         },
+                         {
+                              "type": "hard-coded",
+                              "value": "\r\n          <AppBarPage.NavigationIcon \n               icon=\"hidden\"\r\n          >\r\n          </AppBarPage.NavigationIcon>\r\n     "
+                         }
+                    ],
+                    "ref": "ref_navigation_icon_appbar"
+               },
+               "actions": {
+                    "type": "array",
+                    "items": [
+                         {
+                              "type": "object",
+                              "ref": "ref_icon_action_appbar",
+                              "props": {
+                                   "icon": {
+                                        "name": "icon",
+                                        "type": "object-property",
+                                        "value": {
+                                             "type": "string",
+                                             "defaultValue": ""
+                                        }
+                                   },
+                                   "caption": {
+                                        "name": "caption",
+                                        "type": "object-property",
+                                        "value": {
+                                             "type": "string",
+                                             "defaultValue": ""
+                                        }
+                                   }
+                              }
+                         }
+                    ],
+                    "ref": "ref_actions_appbar_1_icon_action"
+               },
+               "iconName": {
+                    "type": "options",
+                    "options": [
+                         {
+                              "type": "hard-coded",
+                              "value": "mds_ic_apps"
+                         },
+                         {
+                              "type": "hard-coded",
+                              "value": "mds_ic_alarm_on"
+                         }
+                    ],
+                    "ref": "ref_all_icons"
+               }
+          }
+     }
+]
